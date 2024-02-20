@@ -28,7 +28,7 @@ sequenceDiagram
     Service->>Repository: Execute Business Logic
     Repository->>Database: Query Data
 
-    Repository-->>Service: Prase Data
+    Repository-->>Service: Parse Data
     Service-->>Controller: Form Response 
     Controller-->>Client: Response
 ```
