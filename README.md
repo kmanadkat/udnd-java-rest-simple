@@ -6,11 +6,12 @@ API that returns a list of dogs from an embedded H2 in memory database. It uses 
 
 ### Database Entity
 ```mermaid
-classDiagram
-Dog : Long id
-Dog : String name
-Dog : String breed
-Dog : String origin
+ classDiagram
+      class Dog
+      Dog: Long id
+      Dog: String name
+      Dog: String breed
+      Dog: String origin
 ```
 
 ### Execution Flow
