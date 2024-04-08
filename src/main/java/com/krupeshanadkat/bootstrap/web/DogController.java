@@ -2,6 +2,8 @@ package com.krupeshanadkat.bootstrap.web;
 
 import com.krupeshanadkat.bootstrap.entity.Dog;
 import com.krupeshanadkat.bootstrap.service.DogService;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -12,6 +14,12 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
+@ApiResponses(value = {
+        @ApiResponse(responseCode = "400", description = "This is a bad request, please follow api documentation"),
+        @ApiResponse(responseCode = "401", description = "Due to security constraints, you access request cannot be authorized"),
+        @ApiResponse(responseCode = "404", description = "Resource you are looking for doesnot exists"),
+        @ApiResponse(responseCode = "500", description = "Internal server error")
+})
 public class DogController {
     private DogService dogService;
 
