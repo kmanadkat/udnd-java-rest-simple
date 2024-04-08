@@ -42,3 +42,6 @@ The following table lists the available API routes for the Dog REST API project:
 | `/dogs/breed` | GET    | Get all dogs breed  |
 | `/{id}/breed` | GET    | Get breed by dog id |
 | `/dogs/name`  | GET    | Get all dogs name   |
+
+### Swagger UI Docs
+http://localhost:8080/swagger-ui/index.html
